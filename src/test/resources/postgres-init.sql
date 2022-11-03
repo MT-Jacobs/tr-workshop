@@ -1,0 +1,5 @@
+CREATE TABLE IF NOT EXISTS thing
+(
+    id uuid NOT NULL CONSTRAINT thing_pk PRIMARY KEY,
+    name VARCHAR
+);

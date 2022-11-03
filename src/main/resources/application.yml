@@ -1,0 +1,23 @@
+micronaut:
+  application:
+    name: trWorkshop
+datasources:
+  default:
+    driverClassName: org.postgresql.Driver
+    db-type: postgres
+    dialect: POSTGRES
+netty:
+  default:
+    allocator:
+      max-order: 3
+jpa:
+  default:
+    entity-scan:
+      packages:
+        - tr.workshop.persistence
+    properties:
+      hibernate.hbm2ddl.auto: none
+test-resources:
+  containers:
+    postgres:
+      init-script-path: postgres-init.sql
